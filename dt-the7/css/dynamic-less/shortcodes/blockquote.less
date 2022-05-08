@@ -1,0 +1,36 @@
+/* #blockquote
+================================================== */
+
+blockquote:not(.shortcode-blockquote):not(.elementor-blockquote),
+blockquote.shortcode-blockquote.block-style-widget,
+.block-style-widget {
+	.solid-bg-mixin;
+}
+blockquote:not(.shortcode-blockquote):not(.elementor-blockquote),
+.block-style-widget {
+	.outline-decoration;
+	.shadow-decoration;
+}
+
+.shortcode-pullquote:after,
+.shortcode-action-bg:before {
+	.accent-bg-mixin;
+}
+blockquote.shortcode-blockquote {
+	.transparent-border-mixin;
+}
+blockquote:not(.elementor-blockquote),
+blockquote:not(.elementor-blockquote) *,
+.shortcode-pullquote,
+.wp-block-quote cite {
+	.header-color;
+}
+blockquote:not(.wp-block-quote):not(.elementor-blockquote) {
+	color: var(--the7-h5-color);
+	font: var(--the7-h5-font);
+	text-transform: var(--the7-h5-text-transform);
+}
+/*Call to action*/
+.plain-bg {
+	.transparent-border-mixin;
+}

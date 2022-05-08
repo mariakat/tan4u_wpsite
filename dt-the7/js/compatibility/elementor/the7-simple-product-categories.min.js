@@ -1,0 +1,1 @@
+jQuery(window).on("elementor/frontend/init",(function(){elementorFrontend.hooks.addAction("frontend/element_ready/the7-elements-simple-product-categories.default",(function(e,n){window.the7ApplyWidgetImageRatio(e),window.the7ProcessEffects(e.find(".wf-cell:not(.shown)")),window.the7ApplyMasonryWidgetCSSGridFiltering(e.find(".dt-css-grid"))}))}));

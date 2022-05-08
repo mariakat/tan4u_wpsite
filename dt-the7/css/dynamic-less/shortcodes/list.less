@@ -1,0 +1,19 @@
+/* #List
+================================================== */
+.list-divider li {
+	.transparent-border-mixin;
+}
+
+.standard-arrow.list-divider.bullet-top li:not(:first-child):before,
+.standard-arrow.list-divider.bullet-top li:not(:first-child):after {
+	margin-top: 14px;
+}
+
+.standard-arrow.bullet-top li:before,
+.standard-arrow.bullet-top li:after {
+	margin-top: 5px;
+}
+.standard-number-list li:before,
+.standard-arrow li:before {
+	.accent-bg-mixin;
+}

@@ -1,0 +1,57 @@
+
+/* #Beautiful loading
+================================================== */
+
+body #load {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	z-index: 9901;
+	opacity: 1;
+	visibility: visible;
+	transition: all .35s ease-out;
+}
+
+/* #Double circles
+================================================== */
+.load-wrap {
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+	display: -ms-flexbox;
+	display: -ms-flex;
+	display: flex;
+	-ms-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+	-ms-flex-pack: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+.load-wrap > svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*css vars mixin*/
+.css-var-background(@varName, @startColor: #eee, @endColor: white) when (@endColor = ~"") {
+	background: var(~"@{varName}", @startColor);
+}
+.css-var-background(@varName, @startColor: #eee, @endColor: white) when not (@endColor = ~"") {
+	background: var(~"@{varName}", transparent linear-gradient(@endColor));
+}
+
+/* #Beautiful loading dynamic
+================================================== */
+#load {
+	.css-var-background("--the7-elementor-beautiful-loading-bg",  @beautiful-loading-bg,  @beautiful-loading-bg-2);
+	--the7-beautiful-spinner-color2: var(--the7-beautiful-spinner-color,  @beautiful-spinner-color);
+}

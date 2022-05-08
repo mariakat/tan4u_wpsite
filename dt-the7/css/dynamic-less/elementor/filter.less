@@ -1,0 +1,69 @@
+@show-filter-by-tablet: "";
+@show-filter-by-mobile: "";
+@show-filter-sorting-tablet: "";
+@show-filter-sorting-mobile: "";
+
+.hide-filter-extras-by-default() {
+  .filter-by,
+  .filter-sorting {
+    display: none;
+  }
+}
+
+
+.hide-filter-categ (@hide) when (@hide = hide) {
+    display: none;
+}
+.@{unique-shortcode-class-name} .show-filter-categories  .filter-categories {
+    display: flex;
+}
+.@{unique-shortcode-class-name} .hide-filter-categories  .filter-categories {
+    display: none;
+}
+#main .@{unique-shortcode-class-name} .filter-extras {
+    display: block;
+    & .filter-by {
+      display: var(--display-by);
+    }
+    .filter-sorting {
+      display: var(--display-sort);
+    }
+  }
+@media screen and (max-width: @elementor-lg-breakpoint - 1) {
+  #main .@{unique-shortcode-class-name}  .filter-categories {
+    display: flex;
+    .hide-filter-categ (@show-filter-categories-tablet);
+  }
+
+  .@{unique-shortcode-class-name}  {
+    & .show-filter-categories-tablet .filter-categories {
+      display: flex;
+    }
+  }
+  .@{unique-shortcode-class-name} .hide-filter-categories-tablet  .filter-categories {
+      display: none;
+  }
+  #main .@{unique-shortcode-class-name} .filter-extras {
+    display: block;
+  }
+}
+
+@media screen and (max-width: @elementor-md-breakpoint - 1) {
+  #main .@{unique-shortcode-class-name}  .filter-categories {
+    display: flex;
+    .hide-filter-categ (@show-filter-categories-mobile);
+  }
+
+  .@{unique-shortcode-class-name} {
+    & .show-filter-categories-mobile .filter-categories {
+      display: flex;
+    }
+  }
+  .@{unique-shortcode-class-name} .hide-filter-categories-mobile  .filter-categories {
+      display: none;
+  }
+  #main .@{unique-shortcode-class-name} .filter-extras {
+    display: block;
+  }
+}
+

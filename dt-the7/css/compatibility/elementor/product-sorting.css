@@ -1,0 +1,70 @@
+.elementor-widget-the7-product-sorting {
+    --icon-spacing: 5px;
+    --icon-size: 1em;
+    --ordering-line-height: var(--the7-base-line-height);
+    --orderby-padding: 0px;
+    --orderby-padding-right: 0px;
+    --orderby-padding-left: 0px;
+}
+
+.elementor-widget-the7-product-sorting .the7-wc-catalog-ordering {
+    position: relative;
+    font-size: var(--the7-base-font-size);
+    color: var(--the7-base-color);
+    line-height: 0;
+}
+
+.elementor-widget-the7-product-sorting .orderby {
+    text-overflow: ellipsis;
+    transition: color .3s, border-color .3s, background-color .3s;
+    height: auto;
+    min-height: var(--the7-base-line-height);
+    width: 100%;
+    margin: 0;
+    background-image: none;
+    border: solid 0;
+    font:  inherit;
+    font-size: var(--the7-base-font-size);
+    color: var(--the7-base-color);
+    padding: var(--orderby-padding);
+    -webkit-appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.elementor-widget-the7-product-sorting select.orderby:focus {
+    box-shadow: initial;
+    outline: initial;
+}
+
+.elementor-widget-the7-product-sorting.align-icon-right .orderby {
+    padding-right: calc(var(--icon-size) + var(--orderby-padding-right) + var(--icon-spacing));
+    padding-left: var(--orderby-padding-left);
+}
+
+.elementor-widget-the7-product-sorting.align-icon-left .orderby {
+    padding-right: var(--orderby-padding-right);
+    padding-left: calc(var(--icon-size) + var(--orderby-padding-left) + var(--icon-spacing));
+}
+
+.elementor-widget-the7-product-sorting .orderby-icon,
+.elementor-widget-the7-product-sorting svg {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    border-style: solid;
+    border-color: transparent !important;
+    transition: color .3s;
+    padding: var(--orderby-padding);
+    box-sizing: content-box;
+    font-size: var(--icon-size);
+    line-height: var(--ordering-line-height);
+}
+
+.elementor-widget-the7-product-sorting svg {
+    width: auto;
+    height: 1em;
+    transition: fill .3s;
+}

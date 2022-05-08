@@ -1,0 +1,185 @@
+/* #Contact form
+================================================== */
+.mixin-float-line-height (@a, @b) when ((@a + 10px) > @b) {
+	line-height: @b - 10px;
+}
+//less.ph(@opacity: 0.5) {
+input::-webkit-input-placeholder { color: var(--the7-input-color); opacity: var(--the7-form-placeholder-opacity, 0.5); }
+input:-moz-placeholder { color: var(--the7-input-color); opacity: var(--the7-form-placeholder-opacity, 0.5); }
+textarea::-webkit-input-placeholder { color: var(--the7-input-color); opacity:  var(--the7-form-placeholder-opacity, 0.5); }
+textarea:-moz-placeholder { color: var(--the7-input-color); opacity: var(--the7-form-placeholder-opacity, 0.5); }
+//}
+//less.ph.focus(@opacity: 0.15) {
+input:focus::-webkit-input-placeholder { opacity: var(--the7-form-placeholder-opacity-focus, 0.15); }
+input:focus:-moz-placeholder { opacity: var(--the7-form-placeholder-opacity-focus, 0.15); }
+textarea:focus::-webkit-input-placeholder { opacity: var(--the7-form-placeholder-opacity-focus, 0.15); }
+textarea:focus:-moz-placeholder { opacity: var(--the7-form-placeholder-opacity-focus, 0.15); }
+//}
+// less.ph(fade(@input-color, 50%));
+// less.ph.focus(fade(@input-color, 15%));
+.form-fields label,
+.comment-form label:not([for="wp-comment-cookies-consent"]) {
+	color: var(--the7-input-color);
+}
+input[type="text"],
+.widget_search input[type="text"].searchform-s,
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="range"],
+input[type="password"],
+select,
+textarea,
+.wpcf7-number,
+.woocommerce div.elementor .the7-elementor-widget form.cart table.variations td.value select,
+.the7-elementor-product-comments .elementor-field-textual,
+.elementor-field-group .elementor-field-textual,
+.elementor-field-group .elementor-select-wrapper select {
+	color: var(--the7-input-color);
+	font: var(--the7-form-md-font);
+	border-style: var(--the7-form-border);
+	border-top-width: var(--the7-top-input-border-width);
+	border-right-width: var(--the7-right-input-border-width);
+	border-bottom-width: var(--the7-bottom-input-border-width);
+	border-left-width: var(--the7-left-input-border-width);
+	padding: var(--the7-top-input-padding) var(--the7-right-input-padding) var(--the7-bottom-input-padding) var(--the7-left-input-padding);
+	border-color: var(--the7-input-border-color);
+	background-color: var(--the7-input-bg-color);
+	border-radius: var(--the7-input-border-radius);
+	box-shadow: var(--the7-form-shadow);
+	transition: all 0.3s ease;
+	&:focus {
+		box-shadow: var(--the7-form-shadow-focus);
+	}
+	.content & {
+		font-size: var(--the7-form-md-font-size);
+		line-height: var(--the7-form-md-line-height);
+	//	.mixin-float-line-height (@base-line-height, var(--the7-input-height)) TODO fix this
+	}
+}
+
+.content .elementor-field-group .elementor-select-wrapper select {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input:-webkit-autofill {
+    transition: background-color 99999s ease-in-out 0s;
+}
+input[type="text"],
+.widget_search input[type="text"].searchform-s,
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="range"],
+input[type="password"],
+select,
+.wpcf7-number,
+.tinvwl-input-group .form-control,
+.woocommerce div.elementor .the7-elementor-widget form.cart table.variations td.value select{
+	min-height: var(--the7-input-height);
+}
+.formError + input,
+.formError + textarea {
+	border-color: #f55b5f;
+}
+
+ select:focus,
+ .woocommerce div.product.elementor form.cart table.variations td.value:focus:before {
+	outline: 0px solid transparent;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+ }
+
+.dt-btn {
+	.widget .dt-form &,
+	.dt-form &,
+	.comment-form & {
+		font: var(--the7-btn-m-font);
+		text-transform: var(--the7-btn-m-text-transform);
+		letter-spacing: var(--the7-btn-m-letter-spacing);
+		word-spacing: var(--the7-btn-m-word-spacing);
+		border-radius: var(--the7-btn-m-border-radius);
+		padding: var(--the7-btn-m-padding);
+	}
+}
+input[type="submit"]:not([name="update_cart"]):not(.woocommerce-widget-layered-nav-dropdown__submit),
+.post-password-form input[type="submit"],
+.mc4wp-form input[type="submit"],
+div.mc4wp-form button[type="submit"],
+.tml-submit-wrap input[type="submit"],
+.wpcf7-form input[type="submit"] {
+	font: var(--the7-btn-m-font);
+	text-transform: var(--the7-btn-m-text-transform);
+	letter-spacing: var(--the7-btn-m-letter-spacing);
+	word-spacing: var(--the7-btn-m-word-spacing);
+	border-radius: var(--the7-btn-m-border-radius);
+	padding: var(--the7-btn-m-padding);
+	min-width: var(--the7-btn-m-min-width);
+	min-height: var(--the7-btn-m-min-height);
+}
+.parentFormundefined,
+.wpcf7-mail-sent-ok,
+.wpcf7-validation-errors,
+.wpcf7-response-output {
+	.popup-message-style &,
+	.inline-message-style &  {
+		background: var(--the7-accent-color);
+	}
+	.popup-message-style.accent-gradient &,
+	.inline-message-style.accent-gradient & {
+		.background-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2);
+	};
+	& .formErrorContent {
+		font: var(--the7-base-font-big);
+	}
+	#page &,
+	.popup-message-style &,
+	.inline-message-style &  {
+		background: @message-bg-color;
+		color: @message-color !important;
+		border: none;
+		& .formErrorContent,
+		& .formErrorContent a,
+		& .close-message
+		& a {
+			color: @message-color;
+		}
+		&:before {
+			color: @message-color;
+		}
+	}
+}
+.comment-form-cookies-consent label,
+.form-terms-text {
+	.text-small;
+}
+
+ 
+select:not(.elementor-field),
+.woocommerce div.elementor .the7-elementor-widget form.cart table.variations td.value select:not(.elementor-field){
+	 -webkit-appearance: none !important;
+	 -moz-appearance: none;
+  
+	background-image:
+	linear-gradient(45deg, transparent 50%, var(--the7-input-color) 50%),
+	linear-gradient(135deg, var(--the7-input-color) 50%, transparent 50%);
+	background-position: calc(100%  ~'-' var(--the7-right-input-padding) ~'-' 5px) 50%, calc(100% ~'-' var(--the7-right-input-padding)) 50%,
+	100% 0;
+	background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+	background-repeat: no-repeat;
+}
+.woocommerce div.elementor .the7-elementor-widget form.cart table.variations td.value select:not(.elementor-field){
+	background-image:
+	linear-gradient(45deg, transparent 50%, var(--the7-input-color) 50%),
+	linear-gradient(135deg, var(--the7-input-color) 50%, transparent 50%);
+	background-position: calc(100%  ~'-' var(--the7-right-input-padding) ~'-' 4px) 50%, calc(100% ~'-' var(--the7-right-input-padding)) 50%,
+	100% 0;
+	background-size: 4px 4px, 4px 4px, 2.5em 2.5em;
+	background-repeat: no-repeat;
+}
