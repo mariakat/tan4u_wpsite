@@ -24,7 +24,12 @@ h1.elementor-heading-title.elementor-size-default {
 .home .elementor-shape-fill {
 	fill: white!important;
 }
-
+a {
+	color:var(--red)!important;
+}
+a:hover {
+	font-weight: bold!important;
+}
 
 /*Responsive*/
 @media screen and (max-width: 1024px) {
