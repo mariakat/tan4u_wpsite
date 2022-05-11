@@ -24,10 +24,10 @@ h1.elementor-heading-title.elementor-size-default {
 .home .elementor-shape-fill {
 	fill: white!important;
 }
-a {
+.tan4utext a {
 	color:var(--red)!important;
 }
-a:hover {
+.tan4utext a:hover {
 	font-weight: bold!important;
 }
 
