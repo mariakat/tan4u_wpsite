@@ -13,14 +13,20 @@ Template: dt-the7
 --yellow: #eecf03;
 
 }
-
-h1.elementor-heading-title.elementor-size-default {
-	font-family: "GoodTimingW00-Regular"!important;
+h1,
+h3 {
+	color:white!important;
 }
 .elementor-shape-fill {
 	fill: #eecf03!important;
 }
-
+.gnorizate ul li {
+	padding:20px 0!important;
+}
+.entry-meta {
+	display:none;
+}
+.page-id-121 .elementor-shape-fill,
 .home .elementor-shape-fill {
 	fill: white!important;
 }
@@ -30,7 +36,9 @@ h1.elementor-heading-title.elementor-size-default {
 .tan4utext a:hover {
 	font-weight: bold!important;
 }
-
+ body.single-dt_gallery.footer-width-fixer {
+	display: none!important;
+}
 /*Responsive*/
 @media screen and (max-width: 1024px) {
 	#img1 div {
