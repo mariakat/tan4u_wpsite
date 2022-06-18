@@ -39,6 +39,19 @@ h3 {
  body.single-dt_gallery.footer-width-fixer {
 	display: none!important;
 }
+body.single-dt_gallery #main>div.wf-wrap{
+	width: 100%!important;
+}
+#main{
+		padding: 0!important;
+		}
+
+				/* .single-gallery-media {
+					padding-bottom: 45px;
+					padding-top: 45px;
+					display: flex;
+					justify-content: center;
+				} */
 /*Responsive*/
 @media screen and (max-width: 1024px) {
 	#img1 div {
